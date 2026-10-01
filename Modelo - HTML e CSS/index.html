@@ -1,0 +1,156 @@
+<!DOCTYPE html> <!-- Declaração obrigatoria que informa ao navegador que o arquivo utiliza HTML5 moderno -->
+<html lang="pt-BR"> <!-- Elemento raiz que envolve todo o documento. O atributo 'lang' especifica o idioma principal -->
+
+<head> <!-- Contém os metadados e configurações da página (informações que não aparecem no corpo do site) -->
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8, garantindo suporte a acentos e ç -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Garante o dimensionamento correto em telas móbiles -->
+    <meta name="description" content="Página de referência e consulta com os principais elementos HTML e CSS explicados."> <!-- Resumo do site para motores de busca (SEO) -->
+    
+    <title>Guia de Consulta - HTML & CSS</title> <!-- Título da página exibido na aba do navegador -->
+
+    <!-- Vínculo com o arquivo de estilos externo -->
+    <link rel="stylesheet" href="style.css"> <!-- Conecta esta página HTML às regras de estilo do arquivo style.css -->
+</head>
+
+<body> <!-- Contém todo o conteúdo visível da página que será renderizado para o usuário -->
+
+    <!-- 1. CABEÇALHO DA PÁGINA (Semântico) -->
+    <header class="header-principal"> <!-- Representa o topo da página, geralmente contendo logo, título e menu -->
+        <h1>Guia de Referência HTML5 & CSS3</h1> <!-- Título principal de maior importância (deve existir apenas um h1 por página) -->
+        
+        <!-- Menu de Navegação principal -->
+        <nav class="menu-navegacao"> <!-- Elemento semântico que agrupa os links de navegação do site -->
+            <ul> <!-- Lista não ordenada para organizar os itens do menu -->
+                <li><a href="#artigos">Artigos</a></li> <!-- 'li' é o item da lista; 'a' é o link hipertexto direcionando para a âncora '#artigos' -->
+                <li><a href="#tabela">Tabela</a></li> <!-- Link âncora para a seção da tabela -->
+                <li><a href="#formulario">Formulário</a></li> <!-- Link âncora para a seção do formulário -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. CONTEÚDO PRINCIPAL (Semântico) -->
+    <main class="container-principal"> <!-- Elemento semântico que envolve o conteúdo único e principal da página -->
+
+        <!-- SEÇÃO 1: Blocos de Texto e Artigo -->
+        <section id="artigos" class="secao"> <!-- 'section' agrupa temas relacionados; 'id' serve como âncora ou identificador único -->
+            <h2>1. Elementos de Texto e Mídia</h2> <!-- Título de nível 2 para subseções -->
+            
+            <article class="post"> <!-- 'article' representa um conteúdo autônomo e independente (ex: post, notícia, card) -->
+                <h3>Título do Artigo (H3)</h3> <!-- Título de nível 3 para sub-tópicos -->
+                
+                <p> <!-- Parágrafo de texto -->
+                    Este é um parágrafo comum. Podemos destacar textos usando a tag <strong>'strong' para negrito de alta importância</strong>,
+                    a tag <em>'em' para ênfase (itálico)</em> e a tag <mark>'mark' para texto destacado</mark>.
+                </p>
+                
+                <hr> <!-- Linha horizontal para separação temática de conteúdo -->
+
+                <!-- Citação em bloco -->
+                <blockquote> <!-- Utilizado para citações longas ou referências externas -->
+                    "A simplicidade é o último grau de sofisticação." - Leonardo da Vinci
+                </blockquote>
+
+                <!-- Imagem com figura semântica -->
+                <figure> <!-- Contêiner semântico para mídias (imagens, ilustrações, gráficos) -->
+                    <img src="https://placehold.co/400x200" alt="Exemplo de imagem explicativa"> 
+                    <!-- 'src' indica o caminho/URL da imagem; 'alt' é a descrição textual alternativa obrigatória para acessibilidade -->
+                    <figcaption>Figura 1: Legenda explicativa vinculada à imagem acima.</figcaption> <!-- Legenda da figura -->
+                </figure>
+            </article>
+        </section>
+
+        <!-- SEÇÃO 2: Listas e Tabelas -->
+        <section id="tabela" class="secao">
+            <h2>2. Listas e Tabelas</h2>
+
+            <!-- Exemplo de Lista Ordenada (Com números) -->
+            <h3>Lista Ordenada (OL)</h3>
+            <ol> <!-- Open Tag de Lista Ordenada (cria sequência 1, 2, 3...) -->
+                <li>Primeiro passo do processo</li>
+                <li>Segundo passo do processo</li>
+            </ol>
+
+            <!-- Exemplo de Tabela de Dados -->
+            <h3>Exemplo de Tabela Estruturada</h3>
+            <table class="tabela-dados"> <!-- Contêiner principal da tabela -->
+                <thead> <!-- Cabeçalho da tabela (define o título das colunas) -->
+                    <tr> <!-- 'tr' representa uma linha (Table Row) -->
+                        <th>ID</th> <!-- 'th' representa uma célula de cabeçalho (negrito e centralizado por padrão) -->
+                        <th>Nome</th>
+                        <th>Função</th>
+                    </tr>
+                </thead>
+                <tbody> <!-- Corpo da tabela onde ficam os dados reais -->
+                    <tr>
+                        <td>01</td> <!-- 'td' representa uma célula comum de dados (Table Data) -->
+                        <td>Ana Souza</td>
+                        <td>Desenvolvedora Front-end</td>
+                    </tr>
+                    <tr>
+                        <td>02</td>
+                        <td>Carlos Lima</td>
+                        <td>Designer UI/UX</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- SEÇÃO 3: Formulários e Interação -->
+        <section id="formulario" class="secao">
+            <h2>3. Formulário de Contato</h2>
+
+            <!-- Form envia dados do usuário -->
+            <form action="#" method="POST" class="form-exemplo"> <!-- 'action' define o destino dos dados; 'method' o método HTTP -->
+                
+                <!-- Campo Texto Simples -->
+                <div class="grupo-form"> <!-- Div para agrupamento do rótulo + campo de entrada -->
+                    <label for="campo-nome">Nome Completo:</label> <!-- Rótulo acessível vinculado ao input pelo atributo 'for' / 'id' -->
+                    <input type="text" id="campo-nome" name="nome" placeholder="Digite seu nome" required> 
+                    <!-- 'type="text"' define entrada de texto; 'placeholder' é o texto de dica; 'required' torna o preenchimento obrigatório -->
+                </div>
+
+                <!-- Campo de E-mail -->
+                <div class="grupo-form">
+                    <label for="campo-email">E-mail:</label>
+                    <input type="email" id="campo-email" name="email" placeholder="seu@email.com" required> 
+                    <!-- 'type="email"' valida automaticamente se o formato digitado contém '@' e domínio -->
+                </div>
+
+                <!-- Menu Selecionável (Dropdown) -->
+                <div class="grupo-form">
+                    <label for="campo-assunto">Assunto:</label>
+                    <select id="campo-assunto" name="assunto"> <!-- Menu suspenso de seleção -->
+                        <option value="duvida">Dúvida</option> <!-- Opção individual do menu select; 'value' é enviado no formulário -->
+                        <option value="sugestao">Sugestão</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <!-- Área de Texto de Múltiplas Linhas -->
+                <div class="grupo-form">
+                    <label for="campo-mensagem">Mensagem:</label>
+                    <textarea id="campo-mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem..."></textarea>
+                    <!-- 'textarea' permite campo expansível de texto longo; 'rows' define a quantidade inicial de linhas visíveis -->
+                </div>
+
+                <!-- Botão de Envio -->
+                <button type="submit" class="btn-principal">Enviar Formulário</button> 
+                <!-- 'type="submit"' dispara a ação de envio do formulário -->
+            </form>
+        </section>
+
+        <!-- 3. BARRA LATERAL (Semântico) -->
+        <aside class="barra-lateral"> <!-- 'aside' representa conteúdo secundário ou periférico em relação ao conteúdo principal (sidebar) -->
+            <h3>Links Úteis</h3>
+            <p>Conteúdo complementar ou anúncios da barra lateral.</p>
+        </aside>
+
+    </main>
+
+    <!-- 4. RODAPÉ DA PÁGINA (Semântico) -->
+    <footer class="rodape-principal"> <!-- Contém informações de copyright, termos de uso ou dados de contato finais -->
+        <p>&copy; 2026 - Todos os direitos reservados.</p> <!-- '&copy;' é a entidade HTML para gerar o símbolo de Copyright © -->
+    </footer>
+
+</body>
+</html>

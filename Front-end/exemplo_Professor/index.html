@@ -1,0 +1,68 @@
+<!DOCTYPE html> <!-- Declara o tipo do documento como HTML5 para que o navegador interprete as regras modernas corretamente -->
+<html lang="pt-BR"> <!-- Elemento raiz que envolve todo o documento HTML. O atributo lang define o idioma principal como Português do Brasil -->
+<head> <!-- Seção do cabeçalho técnico da página (contém metadados, títulos e links externos não visíveis diretamente no corpo) -->
+    <meta charset="UTF-8"> <!-- Configura a codificação de caracteres para UTF-8, permitindo acentos e caracteres especiais da língua portuguesa -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a escala da página para garantir responsividade em telas mobile e desktops -->
+    <title>Portal do Aluno - Início</title> <!-- Define o título que será exibido na aba do navegador -->
+    
+    <!-- Vincula o arquivo de estilos compartilhado -->
+    <link rel="stylesheet" href="style.css"> <!-- Importa o arquivo de estilos CSS externo (style.css) para aplicar os estilos visuais -->
+</head>
+<body> <!-- Contém todo o conteúdo visível da página que é exibido para o usuário final -->
+
+    <!-- Topo da página / Cabeçalho -->
+    <header class="navbar"> <!-- Elemento semântico de cabeçalho da página, estruturado com a classe CSS navbar -->
+        <div class="logo">Portal SENAI</div> <!-- Bloco genérico em nível de bloco utilizado para exibir a marca/logotipo do portal -->
+        
+        <!-- Menu de Navegação -->
+   sos     <nav class="nav-links"> <!-- Elemento semântico de navegação que agrupa os links do menu principal -->
+            <a href="index.html" class="active">Início</a> <!-- Link hipertexto para a página inicial; a classe 'active' destaca que esta é a página atual -->
+            <a href="avisos.html">Avisos Gerais</a> <!-- Link hipertexto direcionando para a página de avisos gerais -->
+        </nav>
+        
+        <div class="user-profile">Olá, Lucas Cardoso</div> <!-- Bloco informativo para exibir a saudação e o nome do usuário ativo no sistema -->
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container"> <!-- Elemento semântico para o conteúdo principal da página; a classe 'container' limita a largura centralizada -->
+        
+        <!-- Seção do cartão de boas-vindas -->
+        <section class="welcome-card"> <!-- Seção semântica que agrupa visualmente o cartão de mensagem de boas-vindas -->
+            <h1>Bem-vindo ao seu Portal, Lucas!</h1> <!-- Título principal e de maior relevância hierárquica (Nível 1) na página -->
+            <p>Aqui você pode acompanhar suas notas, frequência e calendário acadêmico.</p> <!-- Parágrafo de texto descritivo -->
+        </section>
+
+        <!-- Grade de cards de acesso rápido -->
+        <div class="dashboard-grid"> <!-- Contêiner em bloco que organiza os cartões em formato de grade flexível -->
+            
+            <!-- Card individual de atalho: Notas -->
+            <div class="card"> <!-- Bloco representando o primeiro cartão de funcionalidade rápida -->
+                <h3>Minhas Notas</h3> <!-- Título de nível 3 para identificar a seção do cartão -->
+                <p>Verifique o boletim do semestre atual.</p> <!-- Parágrafo informativo da funcionalidade -->
+                <a href="#" class="btn">Acessar</a> <!-- Link estilizado via CSS para ter aparência de botão de ação -->
+            </div>
+            
+            <!-- Card individual de atalho: Frequência -->
+            <div class="card"> <!-- Bloco representando o segundo cartão de funcionalidade rápida -->
+                <h3>Frequência</h3> <!-- Título de nível 3 para o cartão de frequência -->
+                <p>Confira seu histórico de faltas por matéria.</p> <!-- Descrição do recurso do cartão -->
+                <a href="#" class="btn">Acessar</a> <!-- Botão/Link de atalho para acessar a frequência -->
+            </div>
+            
+            <!-- Card individual de atalho: Horários -->
+            <div class="card"> <!-- Bloco representando o terceiro cartão de funcionalidade rápida -->
+                <h3>Horário das Aulas</h3> <!-- Título de nível 3 para o cartão de horários -->
+                <p>Veja o cronograma de salas e horários.</p> <!-- Descrição do recurso exibido -->
+                <a href="#" class="btn">Acessar</a> <!-- Botão/Link de atalho para acessar o cronograma -->
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Rodapé da Página -->
+    <footer class="footer"> <!-- Elemento semântico para o rodapé da página estilizado com a classe 'footer' -->
+        <p>&copy; 2026 Portal SENAI - Todos os direitos reservados.</p> <!-- Parágrafo exibindo a indicação de direitos autorais e copyright -->
+    </footer>
+
+</body>
+</html>

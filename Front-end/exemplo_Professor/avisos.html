@@ -1,0 +1,61 @@
+<!DOCTYPE html> <!-- Informa ao navegador que o documento deve ser renderizado no padrão HTML5 -->
+<html lang="pt-BR"> <!-- Define a linguagem base da estrutura do documento como português do Brasil -->
+<head> <!-- Seção com os metadados e arquivos de configuração que não aparecem na tela diretamente -->
+    <meta charset="UTF-8"> <!-- Define o padrão de codificação de caracteres UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a visualização para dispositivos móveis e telas responsivas -->
+    <title>Portal do Aluno - Avisos Gerais</title> <!-- Define o título exibido na aba do navegador para a página de avisos -->
+    <link rel="stylesheet" href="style.css"> <!-- Importa a folha de estilo CSS compartilhada -->
+</head>
+<body> <!-- Contêiner de todos os elementos visíveis na página de avisos -->
+
+    <!-- Cabeçalho idêntico para manter a consistência do portal -->
+    <header class="navbar"> <!-- Seção semântica de topo da página contendo o menu e perfil -->
+        <div class="logo">Portal SENAI</div> <!-- Exibição do nome da marca/sistema -->
+        
+        <nav class="nav-links"> <!-- Menu semântico com os hiperlinks de navegação do portal -->
+            <a href="index.html">Início</a> <!-- Link para retornar à página inicial -->
+            <!-- A classe active muda de lugar para indicar a página atual -->
+            <a href="avisos.html" class="active">Avisos Gerais</a> <!-- Link para a página de avisos marcada com a classe active -->
+        </nav>
+        
+        <div class="user-profile">Olá, Lucas Cardoso</div> <!-- Identificação do usuário logado -->
+    </header>
+
+    <!-- Conteúdo de Avisos -->
+    <main class="container"> <!-- Área central contentora do conteúdo específico de avisos -->
+        <h2>Avisos Gerais</h2> <!-- Título de nível 2 indicando a seção atual de avisos -->
+        <p class="subtitle">Fique por dentro das últimas atualizações da instituição.</p> <!-- Parágrafo usado como subtítulo com estilo suavizado -->
+
+        <!-- Lista de avisos empilhada verticalmente -->
+        <div class="avisos-list"> <!-- Bloco contêiner para organizar todos os itens de aviso em pilha -->
+            
+            <!-- Aviso individual: Urgente -->
+            <div class="aviso-item urgente"> <!-- Cartão de aviso contendo a classe adicional 'urgente' para a borda vermelha -->
+                <div class="aviso-header"> <!-- Cabeçalho do cartão de aviso para alinhar a categoria e a data -->
+                    <span class="tag">Urgente</span> <!-- Elemento inline estilizado como etiqueta de destaque para indicar urgência -->
+                    <span class="data">30/09/2026</span> <!-- Elemento inline utilizado para formatar e destacar a data do aviso -->
+                </div>
+                <h3>Renovação de Matrícula - Prazo Final</h3> <!-- Título de nível 3 para o assunto do aviso urgente -->
+                <p>Atenção! O prazo para renovação de matrícula do próximo semestre se encerra nesta sexta-feira. Não perca a data para garantir sua vaga.</p> <!-- Descrição detalhada do aviso urgente -->
+            </div>
+
+            <!-- Aviso individual: Informativo -->
+            <div class="aviso-item"> <!-- Cartão de aviso padrão contendo a borda padrão em azul -->
+                <div class="aviso-header"> <!-- Cabeçalho para alinhamento da etiqueta informativa e da data -->
+                    <span class="tag info">Informativo</span> <!-- Etiqueta com classe adicional 'info' para mudar a cor para tons de azul -->
+                    <span class="data">28/09/2026</span> <!-- Exibição da data da notícia informativa -->
+                </div>
+                <h3>Manutenção no Sistema Acadêmico</h3> <!-- Título de nível 3 descrevendo o assunto do aviso informativo -->
+                <p>Informamos que o portal passará por manutenção programada neste sábado, das 22h às 04h. Algumas funções podem ficar instáveis.</p> <!-- Descrição detalhada sobre o período de manutenção -->
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="footer"> <!-- Seção semântica do rodapé da página -->
+        <p>&copy; 2026 Portal SENAI - Todos os direitos reservados.</p> <!-- Mensagem de copyright do portal -->
+    </footer>
+
+</body>
+</html>

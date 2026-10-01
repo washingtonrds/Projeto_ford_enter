@@ -1,0 +1,185 @@
+/* ==================== CONFIGURAÇÕES GERAIS ==================== */
+/* Seletor Universal (*): Seleciona todos os elementos do HTML da aplicação */
+* {
+    margin: 0;             /* Zera a margem externa padrão dada pelos navegadores a diversos elementos */
+    padding: 0;            /* Zera o preenchimento/espaçamento interno padrão de todos os elementos */
+    box-sizing: border-box; /* Faz com que padding e bordas sejam incluídos na largura e altura totais do elemento */
+}
+
+/* Regras aplicadas ao corpo (body) da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a lista de fontes padrão com alternativas de reserva */
+    background-color: #f4f6f9;                                    /* Cor de fundo cinza bem claro para toda a tela */
+    color: #333;                                                  /* Cor do texto principal (cinza escuro) para dar um bom contraste */
+    /* Configura o body para empilhar Header, Main e Footer perfeitamente */
+    display: flex;                                                /* Transforma o elemento body em um contêiner flexível */
+    flex-direction: column;                                       /* Empilha os elementos filhos (header, main e footer) em sentido vertical */
+    min-height: 100vh;                                            /* Garante que o corpo ocupe no mínimo 100% da altura visível da tela */
+}
+
+/* ==================== BARRA DE NAVEGAÇÃO (FLEXBOX) ==================== */
+/* Classe do cabeçalho superior */
+.navbar {
+    display: flex;                  /* Define a barra como contêiner flexível na horizontal */
+    justify-content: space-between; /* Distribui os 3 blocos (logo, menu, perfil) com espaço igual entre eles */
+    align-items: center;            /* Centraliza todos os itens do cabeçalho verticalmente */
+    background-color: #1e3a8a;       /* Cor de fundo em tom azul escuro institucional */
+    padding: 15px 40px;             /* Preenchimento interno (15px acima/abaixo e 40px nas laterais) */
+    color: white;                   /* Define a cor padrão do texto dentro da navbar como branca */
+}
+
+/* Classe de formatação do Logotipo */
+.logo {
+    font-size: 1.5rem;              /* Define o tamanho da fonte proporcional (1.5x o tamanho padrão) */
+    font-weight: bold;              /* Aplica o estilo em negrito ao texto do logo */
+}
+
+/* Contêiner dos links da navegação no menu */
+.nav-links {
+    display: flex;                  /* Organiza os hiperlinks em formato de linha horizontal */
+    gap: 20px;                      /* Espaçamento interno de 20px entre os links do menu */
+}
+
+/* Formatação dos links dentro da barra de navegação */
+.nav-links a {
+    color: #cbd5e1;                 /* Cor inicial dos links em um tom azul-acinzentado claro */
+    text-decoration: none;          /* Remove a linha sublinhada padrão dos links do navegador */
+    font-weight: 500;               /* Define a espessura média da fonte */
+    transition: color 0.3s;         /* Define a animação suave de 0.3 segundos ao mudar de cor no passar do mouse */
+}
+
+/* Regra encadeada para estados de sobreposição do mouse (:hover) e link ativo (.active) */
+.nav-links a:hover, .nav-links a.active {
+    color: white;                   /* Destaca o link ativo ou com o mouse por cima mudando a cor do texto para branco */
+}
+
+/* ==================== CONTAINER PRINCIPAL ==================== */
+/* Classe que envolve e limita o conteúdo principal de cada página */
+.container {
+    flex: 1;                        /* Faz o conteúdo principal esticar e ocupar todo o espaço restante, empurrando o rodapé para o fim */
+    padding: 40px;                  /* Adiciona 40px de preenchimento interno em todas as bordas */
+    max-width: 1200px;              /* Limita a largura máxima da área de conteúdo em telas grandes */
+    width: 100%;                    /* Garante que o contêiner ocupe 100% da largura disponível até o limite do max-width */
+    margin: 0 auto;                 /* Centraliza a estrutura da página horizontalmente na tela */
+}
+
+/* Classe para elementos de subtítulo */
+.subtitle {
+    color: #64748b;                 /* Cor de texto em tom cinza azulado suave */
+    margin-bottom: 30px;            /* Adiciona um espaçamento de 30px abaixo do subtítulo */
+}
+
+/* ==================== PÁGINA INICIAL: CARDS E GRID (FLEXBOX) ==================== */
+/* Cartão superior de boas-vindas na página inicial */
+.welcome-card {
+    background-color: white;                   /* Fundo branco para destacar do fundo da página */
+    padding: 30px;                             /* Espaçamento interno de 30px */
+    border-radius: 8px;                        /* Arredonda os quatro cantos do cartão em 8px */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);/* Cria uma sombra suave abaixo do cartão dando a sensação de elevação */
+    margin-bottom: 30px;                       /* Espaçamento de 30px na parte inferior para afastar do grid */
+}
+
+/* Título dentro do cartão de boas-vindas */
+.welcome-card h1 {
+    color: #1e3a8a;                 /* Define a cor azul escuro para o título principal do cartão */
+    margin-bottom: 10px;            /* Afasta o título em 10px do parágrafo explicativo que vem abaixo */
+}
+
+/* Grid de controle dos blocos de acesso rápido */
+.dashboard-grid {
+    display: flex;                  /* Aplica o layout flexível para dispor os cartões lado a lado */
+    gap: 20px;                      /* Adiciona um espaço fixo de 20px entre os cartões */
+    flex-wrap: wrap;                /* Se a tela quebrar/diminuir, os cards vão para a linha de baixo automaticamente */
+}
+
+/* Estilo individual de cada cartão da página inicial */
+.card {
+    background-color: white;        /* Fundo branco para cada cartão */
+    flex: 1;                        /* Distribui o tamanho igualmente entre os cards para preencherem a linha */
+    min-width: 250px;               /* Impede que o card esmague muito em telas pequenas, forçando a quebra de linha */
+    padding: 25px;                  /* Preenchimento interno de 25px dentro do cartão */
+    border-radius: 8px;             /* Cantos arredondados de 8px */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Aplica uma sombra leve nas bordas */
+    display: flex;                  /* Transforma o cartão em um contêiner flexível interno */
+    flex-direction: column;         /* Alinha os textos e o botão de forma interna usando Flexbox em sentido vertical */
+    justify-content: space-between; /* Empurra o botão "Acessar" sempre para a base do card mantendo espaço proporcional */
+    gap: 15px;                      /* Distância de 15px entre os elementos internos do cartão */
+}
+
+/* Botões de ação dos cartões */
+.btn {
+    background-color: #2563eb;       /* Fundo em cor azul vibrante */
+    color: white;                   /* Cor do texto em branco */
+    text-align: center;             /* Centraliza o texto do botão horizontalmente */
+    padding: 10px;                  /* Preenchimento de 10px em volta do texto do botão */
+    text-decoration: none;          /* Remove a linha sublinhada padrão dos links */
+    border-radius: 5px;             /* Cantos suavemente arredondados em 5px */
+    font-weight: bold;              /* Texto do botão em negrito */
+    transition: background 0.3s;    /* Transição suave de 0.3s para a mudança de cor do fundo no efeito hover */
+}
+
+/* Efeito ao passar o cursor do mouse no botão */
+.btn:hover {
+    background-color: #1d4ed8;       /* Escurece ligeiramente o azul do fundo quando o usuário passa o mouse */
+}
+
+/* ==================== PÁGINA DE AVISOS ==================== */
+/* Contêiner da lista de avisos */
+.avisos-list {
+    display: flex;                  /* Transforma a lista de avisos em um contêiner flexível */
+    flex-direction: column;         /* Lista os avisos em formato de pilha (vertical) */
+    gap: 20px;                      /* Espaçamento de 20px entre um cartão de aviso e outro */
+}
+
+/* Estilo base do item/cartão de aviso */
+.aviso-item {
+    background-color: white;        /* Fundo branco no cartão de aviso */
+    padding: 20px;                  /* Preenchimento interno de 20px */
+    border-radius: 8px;             /* Arredondamento dos cantos em 8px */
+    border-left: 5px solid #2563eb; /* Borda lateral azul padrão na extrema esquerda do cartão */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra suave ao redor do cartão */
+}
+
+/* Aplica uma variação visual para avisos marcados como urgentes */
+.aviso-item.urgente {
+    border-left-color: #dc2626;     /* Muda a cor da borda esquerda para vermelho */
+}
+
+/* Linha superior dentro do cartão do aviso */
+.aviso-header {
+    display: flex;                  /* Organiza a tag e a data na horizontal usando Flexbox */
+    justify-content: space-between; /* Joga a Tag para a esquerda e a Data para a extrema direita */
+    margin-bottom: 10px;            /* Afasta o cabeçalho em 10px do título do aviso */
+}
+
+/* Tag/Etiqueta padronizada de aviso (ex: Urgente) */
+.tag {
+    background-color: #fee2e2;       /* Fundo vermelho claro para chamar atenção */
+    color: #dc2626;                 /* Texto em tom de vermelho escuro */
+    padding: 4px 8px;               /* Preenchimento interno da tag (4px acima/abaixo, 8px lados) */
+    border-radius: 4px;             /* Cantos suavemente arredondados em 4px */
+    font-size: 0.85rem;             /* Tamanho da fonte levemente menor que o texto base */
+    font-weight: bold;              /* Texto da tag em negrito */
+}
+
+/* Variação visual para tags do tipo informativo */
+.tag.info {
+    background-color: #e0f2fe;       /* Troca o fundo da tag para um tom de azul claro */
+    color: #0369a1;                 /* Troca a cor do texto da tag para azul escuro */
+}
+
+/* Texto de data dentro dos avisos */
+.data {
+    color: #94a3b8;                 /* Define uma cor cinza clara para a data para mantê-la sutil */
+    font-size: 0.9rem;              /* Fonte ligeiramente menor para não roubar o foco principal */
+}
+
+/* ==================== RODAPÉ ==================== */
+/* Estilo para a barra do rodapé */
+.footer {
+    background-color: #0f172a;      /* Fundo azul muito escuro (quase preto) */
+    color: #94a3b8;                 /* Cor de texto cinza claro para bom contraste e leitura */
+    text-align: center;             /* Centraliza o texto do rodapé horizontalmente */
+    padding: 20px;                  /* Preenchimento interno de 20px em todas as direções */
+    margin-top: auto;               /* Reforço mecânico para manter o rodapé sempre embaixo caso o conteúdo seja curto */
+}
